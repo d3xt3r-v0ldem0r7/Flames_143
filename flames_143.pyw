@@ -58,12 +58,10 @@ def about():
 	abou_t.geometry("560x565")
 	abou_t.title("About")
 
-	#lbbl3 = Label(abou_t, text = "      ",bg="white")
 	lbb1 = Label(abou_t, text = "\nFLAMES_143  --V1.0\n_________________________",
 				fg = 'blue', bg='white',bd = 1, anchor = "w",font = ('conlas', 20, 'bold'))
 	lbb2 = Label(abou_t, text = "\nVersion 1.0\nCopyright © 2022. All rights reserved.\n\tGNU Genral Public License.\n\nThis program is free software; you can redistribute it \nand/or modify it under the terms of the GNU General\n Public License as published by the Free Software     `\nFoundation;                                                               `\n\nThis program is distributed in the hope that it will be \n  useful, but WITHOUT ANY WARRANTY; without even \n  the implied warranty of MERCHANTABILITY or FITNESS\nFOR A PARTICULAR PURPOSE. See the GNU General\n  Public License for more details.                                     `\nYou should have received a copy of the GNU General \nPublic License along with this program. If not, see \n<https://www.gnu.org/licenses/>.",
 				fg = 'black', bg='white',bd = 1, anchor = "w",font = ('conlas', 12, 'bold'))
-	#lbbl3.grid(row=0,column=0)
 	lbb1.grid(row=0,column=1)
 	lbb2.grid(row=1,column=1)
 
@@ -80,13 +78,10 @@ if __name__ == "__main__" :
 	root.config(menu=menubar)
 
 	file_menu = Menu(menubar, tearoff=0)
-	#file_menu.add_command(label='New')
-	#file_menu.add_separator()
 	file_menu.add_command(label='Exit', command=root.destroy)
 
 	menubar.add_cascade(label="Menu", menu=file_menu, underline=0)
 	help_menu = Menu(menubar, tearoff=0)
-	#help_menu.add_command(label='Welcome')
 	help_menu.add_command(label='About...',command=about)
 	menubar.add_cascade(label="Help", menu=help_menu, underline=0)
 
